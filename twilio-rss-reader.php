@@ -32,7 +32,7 @@
 <Response>
   <?php
   
-  if( !isset($_GET['Digits']) ) {
+  if( isset($_GET['Digits']) ) {
     // If a key was pressed, read a story
   	$story = $_GET['Digits'];
   	echo '<Say ' . $say_params . '>'; 
