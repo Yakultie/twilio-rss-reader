@@ -9,7 +9,7 @@ This PHP script generates the [TwiML](https://www.twilio.com/docs/api/twiml) cod
 3. Listen to the news!
 
 ## Limitations
-* Limited to the first 9 articles. You could change the <Gather> parameters to allow the entering of two digits followed by # to remove this limit.
+* Limited to the first 9 articles. You could change the `<Gather>` parameters to allow the entering of two digits followed by # to remove this limit.
 * If the RSS feed changes between the time the script is started and an article is selected, the index will be incorrect and the wrong article will be read
 
 ## Contact
