@@ -11,8 +11,8 @@
   $language = "en-gb";
 
   // Messages
-  $greeting = "Welcome to the news hotline!";
-  $no_choice_made = "Sorry, I didn't get that.";
+  $greeting = "Welcome to Bernard's personal news hotline. Here is the latest news from BBC. ";
+  $no_choice_made = "Sorry, I didn't get that. ";
     
   // The URL of this script
   $url = 'http://' . dirname($_SERVER["SERVER_NAME"] .  $_SERVER['PHP_SELF']) . '/' . basename(__FILE__);
