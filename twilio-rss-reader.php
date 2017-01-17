@@ -11,7 +11,7 @@
   $language = "en-gb";
 
   // Messages
-  $greeting = "Welcome to Bernard's personal news hotline. Here is the latest news from BBC. ";
+  $greeting = "Welcome to the Hong Kong Ass See Ham Pee news hotline. Made by Bee Tee. ";
   $no_choice_made = "Sorry, I didn't get that. ";
     
   // The URL of this script
@@ -35,26 +35,26 @@
   if( isset($_GET['Digits']) ) {
     // If a key was pressed, read a story
   	$story = $_GET['Digits'];
-  	echo '<Say ' . $say_params . '>'; 
+  	echo '<Say voice="man">'; 
   	echo html_entity_decode( strip_tags( $rss->channel->item[intVal($story-1)]->description ) );
   	echo "</Say>\n";
   } else {
     // Otherwise, read a greeting    
-    echo '<Say ' . $say_params . '>' . $greeting . "</Say>\n";
+    echo '<Say voice="man">' . $greeting . "</Say>\n";
   }
   
   // Create a menu item for each article
   echo '<Gather action="' . $url . '" method="GET" numDigits="1">' . "\n";
     $i = 1;
     foreach($rss->channel->item as $item) { 
-      echo '<Say ' . $say_params . '>Press "' . $i .'" for ' . $item->title . "</Say>\n";
+      echo '<Say voice="man">'Press "' . $i .'" for ' . $item->title . "</Say>\n";
       $i++;
       if($i > 9) break;
     }
   echo "</Gather>\n";
   
   // If no key pressed, loop back around
-  echo '<Say ' . $say_params . '>' . $no_choice_made . "</Say>\n";
+  echo '<Say voice="man">' . $no_choice_made . "</Say>\n";
   echo '<Redirect>' . $url . '</Redirect>';
   
   ?>	
